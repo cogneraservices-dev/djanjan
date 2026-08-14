@@ -15,7 +15,17 @@ The old host was running the project's **Vite dev server** (`npm run dev`) as th
 | `package.json` | Served verbatim |
 | `public/images/*` | Downloaded (13 files) |
 
-`index.html` and `src/style.css` are **byte-identical** to the originals. `src/main.js` is identical apart from its CSS import, restored from Vite's rewritten `/src/style.css?t=…` to the normal `./style.css`.
+As recovered, `index.html` and `src/style.css` were **byte-identical** to the originals. `src/main.js` is identical apart from its CSS import, restored from Vite's rewritten `/src/style.css?t=…` to the normal `./style.css`.
+
+`index.html` has since been changed intentionally — see *Changes since recovery* below.
+
+## Changes since recovery
+
+Deliberate departures from the recovered original, kept separate from the restoration itself:
+
+- **Hero "BOOK THE VIBE" button** now opens WhatsApp (`wa.me/919148993037`, prefilled *"Hi DJ Anjan, I'd like to book you for an event."*, `target="_blank"`) instead of scrolling to `#booking`. Styling unchanged.
+
+The nav's **BOOKING** and **GET IN TOUCH** links still point at `#booking` and still scroll to the on-page form, which is intact and submits via WhatsApp through `src/main.js`.
 
 ## ⚠️ Palette discrepancy — read before changing colours
 
