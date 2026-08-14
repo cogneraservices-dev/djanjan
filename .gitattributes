@@ -1,0 +1,12 @@
+# The recovered sources are byte-identical to the originals served by the client's
+# old host, which used LF endings. Force LF on checkout everywhere so that property
+# survives cloning on Windows (where core.autocrlf would otherwise rewrite to CRLF).
+* text=auto eol=lf
+
+# Never touch binary assets.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.webp binary
